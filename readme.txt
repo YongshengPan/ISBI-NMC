@@ -1,3 +1,6 @@
+This project is NOT for commercial use.
+You are not allowed to share this project.
+
 Step 0:
 Intall Matlab CUDA CUDNN in Win10 System.
 
