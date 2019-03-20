@@ -29,4 +29,9 @@ label
 Step 5:
 Run Phrase_III_of_ISBI_NMC.m
 
+Step 6:
+You can also download our trained basic models from
+https://drive.google.com/drive/folders/1DPc85NsP4PiQz39x3up55Qx7KoP0iw9g?usp=sharing
+https://drive.google.com/drive/folders/177dyrKsWdkP5XoNhsaD6Cp1wyIdx3aDt?usp=sharing
+
 
