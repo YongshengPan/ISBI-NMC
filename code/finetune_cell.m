@@ -8,8 +8,8 @@ opts.ininallabel = [];
 
 opts.expDir = fullfile(opts.rootPath, 'models/', ...
     sprintf('cell%dres-%s', opts.whichresnet, num2str(opts.trainset))) ;
-% opts.modelpath =  fullfile(opts.rootPath, 'models/', sprintf('imagenet-resnet-%d-dag.mat', opts.whichresnet));
-opts.modelpath =  sprintf('imagenet-resnet-%d-dag.mat', opts.whichresnet);
+opts.modelpath =  fullfile(opts.rootPath, 'models/', sprintf('imagenet-resnet-%d-dag.mat', opts.whichresnet));
+% opts.modelpath =  sprintf('imagenet-resnet-%d-dag.mat', opts.whichresnet);
 
 opts.dataDir = fullfile(opts.rootPath, '\cells');
 opts.imdbPath = fullfile(opts.expDir, 'imdb.mat');
