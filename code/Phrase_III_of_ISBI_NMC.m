@@ -1,15 +1,15 @@
 % run(fullfile(fileparts(mfilename('fullpath')), ...
 %     '..', 'matconvnet', 'matlab', 'vl_setupnn.m')) ;
 
-% finetune_cell('ininallabel', [], 'trainset', [0,1,2,3], 'testset', -1, 'whichresnet', 50);
-% finetune_cell('ininallabel', [], 'trainset', [0,1,2,3], 'testset', -1, 'whichresnet', 101);
-% finetune_cell('ininallabel', [], 'trainset', [0,1,2,3], 'testset', -1, 'whichresnet', 152);
+finetune_cell('ininallabel', [], 'trainset', [0,1,2,3], 'testset', -1, 'whichresnet', 50);
+finetune_cell('ininallabel', [], 'trainset', [0,1,2,3], 'testset', -1, 'whichresnet', 101);
+finetune_cell('ininallabel', [], 'trainset', [0,1,2,3], 'testset', -1, 'whichresnet', 152);
 
-% [lb50_0123_4, sc50_0123_4, pr50_0123_4] = evaluate_cell('trainset', [0,1,2,3], 'testset', -1, 'whichresnet', 50);
-% rk_sc = sort(sc50_0123_4);
-% thres = (2397+2418+2457+1219)/(2397+2418+2457+1219+1130+1163+1096+648);
-% pr50_0123_4 = 1+(sc50_0123_4>rk_sc(round(numel(sc50_0123_4)*thres)));
-pr50_0123_4 = 1+(sc50_0123_4>0.6);
+[lb50_0123_4, sc50_0123_4, pr50_0123_4] = evaluate_cell('trainset', [0,1,2,3], 'testset', -1, 'whichresnet', 50);
+rk_sc = sort(sc50_0123_4);
+thres = (2397+2418+2457+1219)/(2397+2418+2457+1219+1130+1163+1096+648);
+pr50_0123_4 = 1+(sc50_0123_4>rk_sc(round(numel(sc50_0123_4)*thres)));
+%pr50_0123_4 = 1+(sc50_0123_4>0.6);
 metrics = calculate_metrics(lb50_0123_4, pr50_0123_4);
 
 rsfl = fopen('isbi_valid.predict', 'w');
