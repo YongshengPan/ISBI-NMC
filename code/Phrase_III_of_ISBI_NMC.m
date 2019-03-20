@@ -19,7 +19,7 @@ zip(sprintf('BM_%dres-cv%s', 50, '0123_4'), 'isbi_valid.predict');
 
 
 [fk50_0123_4] = neighborhood_correction(pr50_0123_4, 'trainset', [0,1,2,3], 'testset', -1, 'whichresnet', 50);
-for epoch = 1:5
+for epoch = 1:3
     [fk101_0123_4] = neighborhood_correction(fk50_0123_4, 'trainset', [0,1,2,3], 'testset', -1, 'whichresnet', 101);
     [fk50_0123_4] = neighborhood_correction(fk101_0123_4, 'trainset', [0,1,2,3], 'testset', -1, 'whichresnet', 50);
 end
